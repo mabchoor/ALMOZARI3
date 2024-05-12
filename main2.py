@@ -33,8 +33,8 @@ chain = RetrievalQA.from_chain_type(llm=llm,
                                     retriever=index.vectorstore.as_retriever(),
                                     input_key="question")
 
-model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
-tokenizer = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M")
+model = AutoModel.from_pretrained("SI2M-Lab/DarijaBERT")
+tokenizer = AutoTokenizer.from_pretrained("SI2M-Lab/DarijaBERT")
 
 
 def translate(text, src_lang, tgt_lang):
